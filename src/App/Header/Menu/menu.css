@@ -1,0 +1,11 @@
+nav div a {
+    display: block;
+    margin: 8px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: color .5s;
+}
+nav div a:hover {
+    color: #e68541;
+}

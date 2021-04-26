@@ -8,17 +8,6 @@
     width: 100%;
     min-height: 650px;
 }
-nav div a {
-    display: block;
-    margin: 8px 0;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #fff;
-    transition: color .5s;
-}
-nav div a:hover {
-    color: #e68541;
-}
 .header h1, .header p, .header button {
     margin: 15px 30px;    
 }
