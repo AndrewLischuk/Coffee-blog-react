@@ -2,7 +2,7 @@
 const eventsBase = [
     {
         id: 1,
-        image: "/event1.jpg",
+        image: "/Photos/event1.jpg",
         cathegory: "Meeting",
         author: "Admin",
         date: "March 4 2021",
@@ -11,7 +11,7 @@ const eventsBase = [
     },
     {
         id: 2,
-        image: "/event2.jpg",
+        image: "/Photos/event2.jpg",
         cathegory: "Recipes",
         author: "Admin",
         date: "March 6 2021",
@@ -20,7 +20,7 @@ const eventsBase = [
     },
     {
         id: 3,
-        image: "./event3.jpg",
+        image: "/Photos/event3.jpg",
         cathegory: "Live music",
         author: "Admin",
         date: "March 6 2021",
@@ -29,7 +29,7 @@ const eventsBase = [
     },
     {
         id: 4,
-        image: "./event4.jpg",
+        image: "/Photos/event4.jpg",
         cathegory: "Stuff",
         author: "Admin",
         date: "March 9 2021",
@@ -38,7 +38,7 @@ const eventsBase = [
     },
     {
         id: 5,
-        image: "./event5.jpg",
+        image: "/Photos/event5.jpg",
         cathegory: "Meeting",
         author: "Admin",
         date: "March 9 2021",
@@ -47,7 +47,7 @@ const eventsBase = [
     },
     {
         id: 6,
-        image: "./event6.jpg",
+        image: "/Photos/event6.jpg",
         cathegory: "Recipes",
         author: "Admin",
         date: "March 11 2021",
@@ -56,7 +56,7 @@ const eventsBase = [
     },
     {
         id: 7,
-        image: "./event7.jpg",
+        image: "/Photos/event7.jpg",
         cathegory: "Recipes",
         author: "Admin",
         date: "March 12 2021",
@@ -65,7 +65,7 @@ const eventsBase = [
     },
     {
         id: 8,
-        image: "./event8.jpg",
+        image: "/Photos/event8.jpg",
         cathegory: "Stuff",
         author: "Admin",
         date: "March 14 2021",

@@ -40,3 +40,21 @@
 .subheader-block a:hover {
     color: #e68541;
 }
+
+
+@media (max-width: 575px) {
+    .subheader-block {
+        display: flex;
+        flex-flow: column;
+        right: 0;
+        bottom: -400px;
+    }
+    .subheader-block>div {
+        width: 90%;
+        height: auto;
+        position: relative;
+    }
+    .subheader-block a {
+        font-size: 16px;
+    }
+}

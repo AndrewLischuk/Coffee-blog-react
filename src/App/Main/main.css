@@ -11,3 +11,12 @@
 .article p, .article img {
     margin-bottom: 30px;
 }
+
+@media (max-width: 575px) {
+    .main {
+        margin-top: 450px;
+    }
+    .title-section {
+        font-size: 25px;
+    }
+}

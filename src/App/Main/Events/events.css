@@ -98,3 +98,24 @@
     color: #e68541;
     text-decoration: underline;
 }
+
+@media (max-width: 575px) {
+    .box img {
+        max-height: 330px;
+    }
+}
+@media (min-width: 768px) {
+    .box img {
+        max-height: 205px;
+    }
+}
+@media (min-width: 992px) {
+    .box img {
+        max-height: 280px;
+    }
+}
+@media (min-width: 1200px) {
+    .box img {
+        max-height: 330px;
+    }
+} 

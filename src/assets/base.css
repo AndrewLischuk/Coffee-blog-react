@@ -172,45 +172,6 @@ button:focus {
         flex: 0 0 100%;
         max-width: 100%;
     }
-    .menu {
-        display: none;
-    }
-    .sticky-menu {
-        display: flex;
-    }
-    .subheader-block {
-        display: flex;
-        flex-flow: column;
-        right: 0;
-        bottom: -400px;
-    }
-    .subheader-block>div {
-        width: 90%;
-        height: auto;
-        position: relative;
-    }
-    .subheader-block a {
-        font-size: 16px;
-    }
-    .main {
-        margin-top: 450px;
-    }
-    .title-section {
-        font-size: 25px;
-    }
-    .box img {
-        max-height: 330px;
-    }
-    .navigation {
-        transform: translateX(150%);
-        position: fixed;
-        background-color: #1d2026;
-        right: 0;
-        top: 0;
-        bottom: 0;    
-        width: 250px;
-        transition: .5s ease-in-out;
-    }
 }
 
 /************ MOBILE SM ************/
@@ -345,16 +306,6 @@ button:focus {
         flex: 0 0 100%;
         max-width: 100%;
     }
-    .box img {
-        max-height: 205px;
-    }
-    div.nav-mobile-menu-none {
-        display: none;
-    }
-    .hidden-menu {
-        opacity: 1;
-        visibility: visible;
-    } 
 }
 
 /************ LAPTOP LG ************/
@@ -421,10 +372,7 @@ button:focus {
     .col-lg-12 {
         flex: 0 0 100%;
         max-width: 100%;
-    }
-    .box img {
-        max-height: 280px;
-    }   
+    }      
 }
 
 /************ DESKTOP XL ************/
@@ -491,8 +439,5 @@ button:focus {
     .col-xl-12 {
         flex: 0 0 100%;
         max-width: 100%;
-    }
-    .box img {
-        max-height: 330px;
-    }
+    }    
 }
