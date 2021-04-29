@@ -4,6 +4,7 @@ import Menu from '../Header/Menu/Menu'
 import Logo from '../Header/Logo/Logo'
 
 const StickyMenu = () => {
+    
     return (
         <>
             <div className="sticky-menu deactivate-el">
@@ -15,7 +16,7 @@ const StickyMenu = () => {
                         <div className="col-xs-3 col-sm-3 col-md-8 col-lg-8 col-xl-8">
                             <Menu/>
                             <div className="col-xs-3 col-sm-3 nav-mobile-menu-none">
-                                <div className="nav-mobile-menu">
+                                <div className="nav-mobile-menu" onClick={() => console.log("clicked")}>
                                     <span></span>
                                     <span></span>
                                     <span></span>
