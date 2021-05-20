@@ -5,8 +5,7 @@ import pic2 from './about-pic2.jpg'
 
 const About = () => {
     return (
-        <section>
-            <a href="" name="about"></a>
+        <section className="about-top">            
             <div className="container">
                 <div className="row article flex-row-between" style={{ marginTop: '100px' }}>
                     <div className="box-cut col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">

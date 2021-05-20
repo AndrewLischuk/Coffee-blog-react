@@ -1,13 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Event = ({
+    id,
     image,
     cathegory,
     author,
     date,
     title,
-    text
+    text,
+    handleEventKey
 }) => {
+
+    
+
     return (
         <div className="flex-column-left col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <div className="box box-cut"><img className="box-img" src={image} alt="" />
@@ -21,10 +27,11 @@ const Event = ({
                     <div className="cathegory-ev">Cathegory: <a href=""><span> {cathegory}</span></a> </div>
                     <div className="date-ev"><i className="fas fa-user-tie"></i> <a href=""><span>{author}</span> </a>at <i className="far fa-clock"></i> <a href=""><span>{date}</span></a> </div>
                     <div className="title-ev">{title}</div>
-                    <div className="text-ev">{text}</div>
+                    <div className="text-ev"> {text.substring(0, 197) + "..."}</div>
                     <div className="more-ev flex-row-between">
-                        <div><i className="far fa-heart"></i> 61</div><a href=""><span><i
-                            className="far fa-file-alt"></i> Read more</span></a>
+                        <div><i className="far fa-heart"></i> 61</div>
+                            <Link to="/eventpage" onClick={() => handleEventKey(id, cathegory)}><span><i
+                            className="far fa-file-alt"></i> Read more</span></Link>
                     </div>
                 </div>
             </div>

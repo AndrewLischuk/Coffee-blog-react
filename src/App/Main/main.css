@@ -13,9 +13,9 @@
 }
 
 @media (max-width: 575px) {
-    .main {
+    /* .main {
         margin-top: 450px;
-    }
+    } */
     .title-section {
         font-size: 25px;
     }

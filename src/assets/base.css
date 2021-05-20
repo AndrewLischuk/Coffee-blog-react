@@ -44,18 +44,20 @@ body {
     align-items: flex-start;
     justify-content: center;
 }
+.flex-column-center {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
 .flex-column-bottom {
     display: flex;
     flex-flow: column;
     align-items: flex-start;
     justify-content: flex-end;
 }
-.activate-el {
-    display: block;  
-}
-.deactivate-el {
-    display: none;
-}
+
+
 span {
     color: #e68541;
 }
@@ -171,6 +173,9 @@ button:focus {
     .col-xs-12 {
         flex: 0 0 100%;
         max-width: 100%;
+    }
+    .about-top {
+        margin-top: 450px;
     }
 }
 

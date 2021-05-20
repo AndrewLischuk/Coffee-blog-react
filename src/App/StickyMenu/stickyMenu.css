@@ -1,9 +1,17 @@
 .sticky-menu {
     height: 60px;
-    position: sticky;
-    top: 0;    
+    position: sticky;        
     background-color: #2f2721;    
-    z-index: 10;   
+    z-index: 10;
+    top: 0;
+    transition: all .5s linear .5s;
+       
+}
+.deactivate-el {
+    display: none;
+}
+.activate-el {
+    display: block;      
 }
 .sticky-menu img {
     width: auto;
@@ -59,8 +67,8 @@
     background-color: #1d2026;   
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: start;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 .active-menu a {
     display: inline-block;

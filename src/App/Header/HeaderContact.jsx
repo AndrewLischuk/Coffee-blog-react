@@ -1,14 +1,12 @@
 import React from 'react'
 import './header.css'
-import subheaderB1 from '../../assets/Images/subheader-block-1.jpg'
-import subheaderB2 from '../../assets/Images/subheader-block-2.jpg'
 import Menu from './Menu/Menu'
 import Logo from './Logo/Logo'
 
 
-const Header = () => {
+const HeaderContact = () => {
     return (        
-        <header className="header header-home">
+        <header className="header header-contacts">
             <div className="container">
                 <div className="row">
                     <div className="section flex-column-left">
@@ -20,7 +18,7 @@ const Header = () => {
                                 <Menu/>
                             </div>
                         </div>
-                        <div className="subheader flex-column-left">
+                        <div className="subheader-additinal flex-column-left">
                             <div className="col-xs-8 col-sm-8 col-md-6 col-lg-4 col-xl-4">
                                 <h1><span>A real Italian cafe</span></h1>
                             </div>
@@ -31,18 +29,9 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="subheader-block flex-row-right col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
-                <div><img className="box-img" src={subheaderB1} alt="" /><a
-                    className="col-xs-8 col-sm-8 col-md-4 col-lg-4 col-xl-4" href="">Explore the history of the cafe
-            <br /><span><i className="fas fa-angle-double-right"></i></span></a></div>
-                <div><img className="box-img" src={subheaderB2} alt="" /><a
-                    className="col-xs-8 col-sm-8 col-md-4 col-lg-4 col-xl-4" href="">Discover our unique coffee <br /><span><i
-                        className="fas fa-angle-double-right"></i></span></a>
-                </div>
-            </div>
+            </div>            
         </header>
     )
 }
 
-export default Header
+export default HeaderContact

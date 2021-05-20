@@ -1,12 +1,28 @@
-.header {  
-    background-image: url(../../assets/Images/subheader-home.jpg);
+.header {   
     background-origin: content-box;
     background-size: cover;
+    background-position: center;
     position: relative;
+}
+.header-home {
+    background-image: url(../../assets/Images/subheader-home.jpg);
+}
+.header-about {
+    background-image: url(../../assets/Images/header-about.jpg);
+}
+.header-events {
+    background-image: url(../../assets/Images/header-events.jpg);
+}
+.header-contacts {
+    background-image: url(../../assets/Images/header-contacts.jpg);
 }
 .subheader {
     width: 100%;
     min-height: 650px;
+}
+.subheader-additinal {
+    width: 100%;
+    min-height: 350px;
 }
 .header h1, .header p, .header button {
     margin: 15px 30px;    
