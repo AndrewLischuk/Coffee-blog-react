@@ -2,6 +2,7 @@ import React from 'react'
 
 import '../assets/reset.css'
 import '../assets/base.css'
+import '../assets/keyframes.css'
 import StickyMenu from './StickyMenu/StickyMenu'
 import Header from './Header/Header'
 import Main from './Main/Main'
@@ -20,6 +21,7 @@ const App = () => {
                 <Route path="/about" exact component={HeaderAbout}/>
                 <Route path="/events" exact component={HeaderEvents}/>
                 <Route path="/eventpage" exact component={HeaderEvents}/>
+                <Route path="/eventcathegory" exact component={HeaderEvents}/>
                 <Route path="/contact" exact component={HeaderContact}/>                    
             <SectionSeparator/>           
             <Main/>

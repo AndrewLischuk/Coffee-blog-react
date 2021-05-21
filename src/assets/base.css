@@ -2,13 +2,14 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: 'Poppins', sans-serif;
-    /* font-family: 'Montserrat', sans-serif */
+    
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    color: #8d827a;  
+    color: #8d827a; 
 }
 
 .container {

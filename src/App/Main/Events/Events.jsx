@@ -3,8 +3,8 @@ import EventBlock from './EventBlock'
 import './events.css'
 
 const Events = ({
-    handleEventKey,
-    eventKey
+    handleEventKey,    
+    handleCathegoryKey    
 }) => {
     return (
         <div style={{marginTop: '80px'}}>
@@ -12,8 +12,8 @@ const Events = ({
                 <div className="row">
                     <section className="events flex-row-between">
                         <EventBlock
-                            handleEventKey={handleEventKey}
-                            eventKey={eventKey}
+                            handleEventKey={handleEventKey}                            
+                            handleCathegoryKey={handleCathegoryKey}                            
                         />
                     </section>
                 </div>

@@ -24,7 +24,7 @@ const eventsBase = [
         cathegory: "Live music",
         author: "Admin",
         date: "March 6 2021",
-        title: "Sit amet consectetur adipisicing elit",
+        title: "Sit amet consectetur elit",
         text: "Quia cum eligendi numquam sint perspiciatis commodi natus blanditiis dolore nihil at. Aut quo optio dolorum est nemo sint soluta eveniet voluptates, totam architecto exercitationem ipsa neque expedita repudiandae qui nobis fugit consectetur, veniam a suscipit? Blanditiis at doloribus velit. Earum, autem magnam assumenda sint eum maiores quae atque illo vitae deleniti, repellat dolorem amet, qui fugiat doloremque sunt in? Accusamus hic nostrum dignissimos, reiciendis omnis corporis fugiat animi nesciunt rerum obcaecati illo ipsa tenetur sapiente iure pariatur perspiciatis odio id. Labore ipsam ex voluptates?",
     },
     {
@@ -60,7 +60,7 @@ const eventsBase = [
         cathegory: "Recipes",
         author: "Admin",
         date: "March 12 2021",
-        title: "Nulla corrupti vitae illum molestiae!",
+        title: "Nulla corrupti vitae illum!",
         text: "Eligendi officiis provident ratione iste? Ab deleniti voluptatibus incidunt repudiandae, laboriosam vitae nulla esse unde ipsa facilis, dolorum error ducimus rerum similique iure eaque itaque omnis sapiente consequuntur quaerat, accusamus aliquid explicabo culpa maiores. Commodi recusandae ea, ullam saepe nemo magnam qui excepturi quod sapiente soluta error alias voluptate fugit id assumenda aliquam accusamus voluptates, laudantium vel quos quisquam! Culpa quaerat earum, dolore fugiat maxime voluptates, quod sint, doloribus est doloremque illo! Nesciunt architecto est molestias reiciendis qui. Similique veniam dignissimos esse aliquid fugiat est perspiciatis natus earum! Ea distinctio minus corporis error excepturi dolore exercitationem incidunt tenetur earum, optio labore fugiat quis, maiores voluptatibus commodi?",
     },
     {

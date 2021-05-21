@@ -4,8 +4,7 @@
     background-color: #2f2721;    
     z-index: 10;
     top: 0;
-    transition: all .5s linear .5s;
-       
+    transition: all .5s linear .5s;   
 }
 .deactivate-el {
     display: none;

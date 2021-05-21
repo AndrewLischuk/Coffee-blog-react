@@ -18,11 +18,11 @@
 }
 .subheader {
     width: 100%;
-    min-height: 650px;
+    min-height: 650px;    
 }
 .subheader-additinal {
     width: 100%;
-    min-height: 350px;
+    min-height: 350px;    
 }
 .header h1, .header p, .header button {
     margin: 15px 30px;    

@@ -4,7 +4,7 @@ import eventsBase from './eventsBase'
 
 const EventBlock = ({
     handleEventKey,
-    eventKey
+    handleCathegoryKey
 }) => {
     return (
         <>
@@ -28,6 +28,7 @@ const EventBlock = ({
                     title={title}
                     text={text}
                     handleEventKey={handleEventKey}
+                    handleCathegoryKey={handleCathegoryKey}
                 />
             ))
         }

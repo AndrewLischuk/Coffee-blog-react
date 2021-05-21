@@ -25,7 +25,7 @@ const StickyMenu = () => {
        
     return (
         <>        
-            <div className={"sticky-menu" + stickyToggle}>               
+            <div className={"sticky-menu fade-in" + stickyToggle}>               
                 <div className="container">
                     <div className="row flex-row-between">
                         <div className="logo col-xs-6">

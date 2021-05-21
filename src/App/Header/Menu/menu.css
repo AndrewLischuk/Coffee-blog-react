@@ -9,6 +9,7 @@ nav div a {
 nav div a:hover {
     color: #e68541;
 }
+
 @media (max-width: 575px) {
     .menu {
         display: none;
