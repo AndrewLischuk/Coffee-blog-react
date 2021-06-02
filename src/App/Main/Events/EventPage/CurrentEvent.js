@@ -3,12 +3,15 @@ import { connect } from 'react-redux'
 import { Testimonials } from '../Testimonials'
 import Separator from '../../../Separator/Separator'
 import '../testimonials.css'
+import { Link } from 'react-router-dom'
 
 const CurrentEvent = ({
     event,
     isLiked,
     addLike,
-    removeLike
+    removeLike,
+    handleEventKey,                   
+    handleCathegoryKey
 }) => {    
     return (
         <div className="flex-column-center" style={{marginTop: "50px"}}>
@@ -21,7 +24,9 @@ const CurrentEvent = ({
                     <div className="box-overlay"></div>
                 </div>
                 <div className="event-block">
-                    <div className="cathegory-ev">Cathegory: <a href=""><span> {event.cathegory}</span></a> </div>
+                    <div className="cathegory-ev">Cathegory: 
+                        <Link to={`/event/cathegory_${event.cathegory}`} onClick={() => handleCathegoryKey(event.cathegory)}><span> {event.cathegory}</span></Link>
+                    </div>
                     <div className="date-ev flex-row-between">
                         <div><i className="fas fa-user-tie"></i> <a href=""><span>{event.author}</span> </a>
                         at <i className="far fa-clock"></i> <a href=""><span> {event.date}</span></a>

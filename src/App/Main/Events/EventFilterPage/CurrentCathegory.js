@@ -17,13 +17,13 @@ const CurrentCathegory = ({
             <div className="box box-cut"><img className="box-img" src={event.image} alt="" />
                 <div className="links-panel flex-row-between">
                     <a href=""><i className="fas fa-search"></i></a>
-                    <Link to="/eventpage"  onClick={() => handleEventKey(event.id, event.cathegory)}><i className="fas fa-link"></i></Link>
+                    <Link to={`/event_${event.id}`}  onClick={() => handleEventKey(event.id, event.cathegory)}><i className="fas fa-link"></i></Link>
                 </div>
                 <div className="box-overlay"></div>
             </div>
             <div className="event-block">
                 <div className="cathegory-ev">Cathegory: 
-                    <Link to="/eventcathegory" onClick={() => handleCathegoryKey(event.cathegory)}><span> {event.cathegory}</span></Link>
+                    <Link to={`/event/cathegory_${event.cathegory}`} onClick={() => handleCathegoryKey(event.cathegory)}><span> {event.cathegory}</span></Link>
                 </div>
                 <div className="date-ev"><i className="fas fa-user-tie"></i> <a href=""><span>{event.author}</span> </a>at <i className="far fa-clock"></i> <a href=""><span>{event.date}</span></a> </div>
                 <div className="title-ev">{event.title}</div>
@@ -35,7 +35,7 @@ const CurrentCathegory = ({
                         }</span>                            
                         <span> 61</span>                             
                     </div>
-                        <Link to="/eventpage" onClick={() => handleEventKey(event.id, event.cathegory)}><span><i
+                        <Link to={`/event_${event.id}`} onClick={() => handleEventKey(event.id, event.cathegory)}><span><i
                         className="far fa-file-alt"></i> Read more</span></Link>
                 </div>
             </div>

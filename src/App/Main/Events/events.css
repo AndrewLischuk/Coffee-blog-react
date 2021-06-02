@@ -65,7 +65,7 @@
 .cathegory-ev a {
     text-decoration: none;
 }
-.cathegory-ev>a>span:hover {
+.cathegory-ev a span:hover {
     text-decoration: underline;
 }
 .date-ev {

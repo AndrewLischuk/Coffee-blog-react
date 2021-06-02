@@ -7,7 +7,9 @@ import CurrentEvent from './CurrentEvent'
 
 const EventPage = ({
     eventKey,
-    eventObj = getEventsObj(eventsBase)
+    eventObj = getEventsObj(eventsBase),
+    handleEventKey,                    
+    handleCathegoryKey
 }) => {
     return (
         <>
@@ -16,6 +18,8 @@ const EventPage = ({
                     <CurrentEvent
                         key={eventId}
                         event={eventObj[eventId]}
+                        handleEventKey={handleEventKey}                    
+                        handleCathegoryKey={handleCathegoryKey}
                     />
                 ))                
             }            

@@ -4,7 +4,7 @@ import eventsBase, { getEventsObj } from '../eventsBase'
 import CurrentCathegory from '../EventFilterPage/CurrentCathegory'
 import '../events.css'
 
-const EventPage = ({    
+const EventFilterPage = ({    
     cathegoryKey,
     eventObj = getEventsObj(eventsBase),
     handleEventKey,                    
@@ -35,4 +35,4 @@ const EventPage = ({
     )
 }
 
-export default EventPage
+export default EventFilterPage

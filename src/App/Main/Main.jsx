@@ -27,21 +27,27 @@ const Main = () => {
         <main className="main">
             <Route path="/" exact component={About}/>
             <Route path="/" exact component={SectionSeparator}/>
-            <Route path="/" exact component={Events}/>
-            
-            <Route path="/about" component={AboutPage}/>
-            <Route path="/events" render={() => (
+            <Route path="/" exact render={() => (
+                <Events
+                    handleEventKey={handleEventKey}                    
+                    handleCathegoryKey={handleCathegoryKey}
+                />
+            )}/>            
+            <Route path="/about" exact component={AboutPage}/>
+            <Route path="/events" exact render={() => (
                 <Events
                     handleEventKey={handleEventKey}                    
                     handleCathegoryKey={handleCathegoryKey}                                        
                 />
             )}/>
-            <Route path="/event/:id" render={() => (
+            <Route path="/event_:id" exact render={() => (
                 <EventPage
                     eventKey={eventKey}
+                    handleEventKey={handleEventKey}                    
+                    handleCathegoryKey={handleCathegoryKey}
                 />
             )}/>
-            <Route path="/eventcathegory" render={() => (
+            <Route path="/event/cathegory_:cathegory" exact render={() => (
                 <EventFilterPage
                 eventKey={eventKey}
                 cathegoryKey={cathegoryKey}
