@@ -76,11 +76,11 @@
     text-decoration: none;
     color: #a8a8a8;
 }
-.date-ev>a>span {    
+.date-ev a span {    
     color: inherit;
     border-bottom: 1px dotted #2f2721;
 }
-.date-ev>a>span:hover {
+.date-ev a span:hover {
     color: #2f2721;
     border-bottom: 1px solid #2f2721;
 }

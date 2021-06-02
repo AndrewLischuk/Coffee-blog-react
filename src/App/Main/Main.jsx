@@ -36,7 +36,7 @@ const Main = () => {
                     handleCathegoryKey={handleCathegoryKey}                                        
                 />
             )}/>
-            <Route path="/eventpage" render={() => (
+            <Route path="/event/:id" render={() => (
                 <EventPage
                     eventKey={eventKey}
                 />

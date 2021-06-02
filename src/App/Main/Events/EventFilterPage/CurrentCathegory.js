@@ -10,7 +10,8 @@ const CurrentCathegory = ({
     isLiked,
     addLike,
     removeLike
-}) => {  
+}) => {
+
     return(
         <div className="flex-column-left col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <div className="box box-cut"><img className="box-img" src={event.image} alt="" />
@@ -42,17 +43,17 @@ const CurrentCathegory = ({
     )
 }
 const mapStateToProps = (state, {event}) => ({
-    isLiked: state[event.cathegory]
+    isLiked: state[event.id]
 })
 
 const mapDispatchToProps = (dispatch, {event}) => ({
     addLike:() => dispatch({
         type:"LIKE",
-        id : event.cathegory
+        id : event.id
     }),
     removeLike:() => dispatch({
         type:"DISLIKE",
-        id : event.cathegory
+        id : event.id
     })
 })
 
