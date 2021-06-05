@@ -43,12 +43,17 @@ export const Testimonials = () => {
     }
 
     return (
-        <>           {
+        <>
+            {
                 testimonials.map((item, i) => (
-                    <div className={"testimonials"} key={i}>
-                        <div className="cathegory-ev" style={{marginBottom:"15px"}}>Name: <span>{item.name} </span>at <i className="far fa-clock"></i> <a href=""><span>{item.date}</span></a> </div>
-                        <div className="comment-text">
-                            <div className="text-ev" style={{marginBottom:"15px"}}>{item.text}</div>
+                    <div className="container" key={i}>
+                        <div className="row">
+                            <div className={"testimonials  col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"}> 
+                                <div className="cathegory-ev" style={{marginBottom:"15px"}}>Name: <span>{item.name} </span>at <i className="far fa-clock"></i> <a href=""><span>{item.date}</span></a> </div>
+                                <div className="comment-text">
+                                    <div className="text-ev" style={{marginBottom:"15px"}}>{item.text}</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 ))
@@ -76,8 +81,7 @@ export const Testimonials = () => {
                         <button className="alt-btn" style={{marginTop:"15px"}}>Leave a comment</button>
                     </div>
                 </div>    
-            </form>
-            
+            </form>            
             
         </>
     )

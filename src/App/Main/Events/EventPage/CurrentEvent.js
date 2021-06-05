@@ -14,6 +14,7 @@ const CurrentEvent = ({
     handleCathegoryKey
 }) => {    
     return (
+        
         <div className="flex-column-center" style={{marginTop: "50px"}}>
             <div className="flex-column-left col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <div className="box box-cut"><img className="box-img" src={event.image} alt="" style={{maxHeight: "fit-content"}} />
