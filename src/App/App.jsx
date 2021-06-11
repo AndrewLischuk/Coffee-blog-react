@@ -22,7 +22,7 @@ const App = () => {
                 <Route path="/events" exact component={HeaderEvents}/>
                 <Route path="/event_:id" exact component={HeaderEvents}/>                
                 <Route path="/event/cathegory_:cathegory" exact component={HeaderEvents}/>                
-                <Route path="/contact" exact component={HeaderContact}/>                    
+                <Route path="/contacts" exact component={HeaderContact}/>                    
             <SectionSeparator/>           
             <Main/>
             <SectionSeparator/>

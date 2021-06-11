@@ -7,6 +7,7 @@ import AboutPage from './About/AboutPage/AboutPage'
 import EventPage from './Events/EventPage/EventPage'
 import EventFilterPage from './Events/EventFilterPage/EventFilterPage'
 import './main.css'
+import Contacts from './Contacts/Contacts'
 
 const Main = () => {
 
@@ -55,6 +56,7 @@ const Main = () => {
                 handleCathegoryKey={handleCathegoryKey}
                 />
             )}/>
+            <Route path="/contacts" exact component={Contacts}/>
         </main>
     )    
 }

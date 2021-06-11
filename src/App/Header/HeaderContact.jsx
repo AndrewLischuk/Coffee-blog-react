@@ -24,8 +24,7 @@ const HeaderContact = () => {
                             </div>
                             <div className="slide-in col-xs-10 col-sm-10 col-md-8 col-lg-6 col-xl-6">
                                 <p>CONTACTS</p>
-                            </div>
-                            <button style={{ marginLeft: '45px' }}>MEET US <i className="fas fa-chevron-down fa-xs" style={{ paddingLeft: '10px' }}></i></button>
+                            </div>                            
                         </div>
                     </div>
                 </div>

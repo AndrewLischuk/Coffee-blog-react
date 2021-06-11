@@ -62,7 +62,7 @@ export const Testimonials = () => {
             <form className="flex-column-left" style={{marginTop:"30px"}} onSubmit={onSend}>
                 <div className="container">
                     <div className="row flex-row-between">
-                        <div className="comment-send">
+                        <div className="comment-send col-xs-12">
                             <input                        
                                 type="text"
                                 placeholder="Your name"
@@ -70,7 +70,7 @@ export const Testimonials = () => {
                                 onChange={handleNameChange}
                             />                    
                         </div>
-                        <div className="comment-send" >
+                        <div className="comment-send col-xs-12">
                             <textarea
                                 cols="30" rows="10"
                                 placeholder="Your text"
