@@ -1,16 +1,12 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { Testimonials } from '../Testimonials'
+import { Testimonials } from '../../../../Components/Testimonials/Testimonials'
 import Separator from '../../../Separator/Separator'
-import '../testimonials.css'
+import '../../../../Components/Testimonials/testimonials.css'
 import { Link } from 'react-router-dom'
 import ScrollFunc from '../../../../Components/ScrollFunc'
+import Likes from '../../../../Components/Likes/Likes'
 
 const CurrentEvent = ({
-    event,
-    isLiked,
-    addLike,
-    removeLike,                   
+    event,                   
     handleCathegoryKey
 }) => {    
     return (        
@@ -33,14 +29,14 @@ const CurrentEvent = ({
                         at <i className="far fa-clock"></i> <a href=""><span> {event.date}</span></a>
                         </div>
                         <div className="more-ev">
-                            <div onClick={() => isLiked ? removeLike(event.id) : addLike(event.id)}>
-                                <span>{
-                                    isLiked ? <i className="fas fa-heart"></i> : <i className="far fa-heart"></i>
-                                }</span>                            
-                                <span> 61</span>                             
-                            </div>                            
+                            <Likes
+                                id={event.id}
+                                likesCount={event.likesCount}
+                                isLiked={event.isLiked}
+                                addLike={event.addLike}
+                                removeLike={event.removeLike}
+                            />                            
                         </div>
-
                     </div>
                     <div className="title-ev">{event.title}</div>
                     <div className="text-ev">{event.text}</div>                    
@@ -51,22 +47,5 @@ const CurrentEvent = ({
         </div>
     )
 }
-const mapStateToProps = (state, {event}) => ({
-    isLiked: state[event.id]
-})
 
-const mapDispatchToProps = (dispatch, {event}) => ({
-    addLike:() => dispatch({
-        type:"LIKE",
-        id : event.id
-    }),
-    removeLike:() => dispatch({
-        type:"DISLIKE",
-        id : event.id
-    })
-})
-
-export default connect (
-mapStateToProps,
-mapDispatchToProps
-) (CurrentEvent) 
+export default CurrentEvent 

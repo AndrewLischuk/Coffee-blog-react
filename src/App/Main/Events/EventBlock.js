@@ -16,7 +16,8 @@ const EventBlock = ({
                 author,
                 date,
                 title,
-                text,                
+                text,
+                likesCount,                
             }) => (
                 <Event 
                     key={id}
@@ -27,6 +28,7 @@ const EventBlock = ({
                     date={date}
                     title={title}
                     text={text}
+                    likesCount={likesCount}
                     handleEventKey={handleEventKey}
                     handleCathegoryKey={handleCathegoryKey}
                 />

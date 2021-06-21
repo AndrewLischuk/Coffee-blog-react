@@ -1,16 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { connect } from 'react-redux'
 import ScrollFunc from '../../../../Components/ScrollFunc'
+import Likes from '../../../../Components/Likes/Likes'
 
 
 const CurrentCathegory = ({
     event,
     handleCathegoryKey,
     handleEventKey,
-    isLiked,
-    addLike,
-    removeLike
 }) => {
 
     return(
@@ -19,7 +16,7 @@ const CurrentCathegory = ({
             <div className="box box-cut"><img className="box-img" src={event.image} alt="" />
                 <div className="links-panel flex-row-between">
                     <a href=""><i className="fas fa-search"></i></a>
-                    <Link to={`/event_${event.id}`}  onClick={() => handleEventKey(event.id, event.cathegory)}><i className="fas fa-link"></i></Link>
+                    <Link to={`/event_${event.id}`}  onClick={() => handleEventKey(event.id, event.likesCount)}><i className="fas fa-link"></i></Link>
                 </div>
                 <div className="box-overlay"></div>
             </div>
@@ -31,35 +28,19 @@ const CurrentCathegory = ({
                 <div className="title-ev">{event.title}</div>
                 <div className="text-ev"> {event.text.substring(0, 197) + "..."}</div>
                 <div className="more-ev flex-row-between">
-                    <div onClick={() => isLiked ? removeLike(event.id) : addLike(event.id)}>
-                        <span>{
-                            isLiked ? <i className="fas fa-heart"></i> : <i className="far fa-heart"></i>
-                        }</span>                            
-                        <span> 61</span>                             
-                    </div>
-                        <Link to={`/event_${event.id}`} onClick={() => handleEventKey(event.id, event.cathegory)}><span><i
+                    <Likes
+                        id={event.id}
+                        likesCount={event.likesCount}
+                        isLiked={event.isLiked}
+                        addLike={event.addLike}
+                        removeLike={event.removeLike}
+                    />                    
+                    <Link to={`/event_${event.id}`} onClick={() => handleEventKey(event.id, event.likesCount)}><span><i
                         className="far fa-file-alt"></i> Read more</span></Link>
                 </div>
             </div>
         </div>
     )
 }
-const mapStateToProps = (state, {event}) => ({
-    isLiked: state[event.id]
-})
 
-const mapDispatchToProps = (dispatch, {event}) => ({
-    addLike:() => dispatch({
-        type:"LIKE",
-        id : event.id
-    }),
-    removeLike:() => dispatch({
-        type:"DISLIKE",
-        id : event.id
-    })
-})
-
-export default connect (
-mapStateToProps,
-mapDispatchToProps
-) (CurrentCathegory)
+export default CurrentCathegory

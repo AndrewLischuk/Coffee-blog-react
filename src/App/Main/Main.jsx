@@ -14,9 +14,9 @@ const Main = () => {
 
     const [eventKey, setEventKey] = useState(0)
 
-    const handleEventKey = (id, cathegory) => {
+    const handleEventKey = (id, likesCount) => {
         setEventKey({
-            [id] : cathegory
+            [id] : likesCount
         })
     }
     const [cathegoryKey, setCathegoryKey] = useState ("")
