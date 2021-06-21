@@ -4,18 +4,18 @@ import { Testimonials } from '../Testimonials'
 import Separator from '../../../Separator/Separator'
 import '../testimonials.css'
 import { Link } from 'react-router-dom'
+import ScrollFunc from '../../../../Components/ScrollFunc'
 
 const CurrentEvent = ({
     event,
     isLiked,
     addLike,
-    removeLike,
-    handleEventKey,                   
+    removeLike,                   
     handleCathegoryKey
 }) => {    
-    return (
-        
+    return (        
         <div className="flex-column-center" style={{marginTop: "50px"}}>
+            <ScrollFunc/>
             <div className="flex-column-left col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <div className="box box-cut"><img className="box-img" src={event.image} alt="" style={{maxHeight: "fit-content"}} />
                     <div className="links-panel flex-row-between">

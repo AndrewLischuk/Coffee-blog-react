@@ -1,6 +1,7 @@
 import React from 'react'
 import EventBlock from './EventBlock'
 import './events.css'
+import ScrollFunc from '../../../Components/ScrollFunc'
 
 const Events = ({
     handleEventKey,    
@@ -8,6 +9,7 @@ const Events = ({
 }) => {
     return (
         <div style={{marginTop: '80px'}}>
+            <ScrollFunc/>
             <div className="container">
                 <div className="row">
                     <section className="events flex-row-between">

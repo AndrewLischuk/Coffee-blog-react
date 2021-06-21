@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import ScrollFunc from '../../../../Components/ScrollFunc'
 
 
 const CurrentCathegory = ({
@@ -14,6 +15,7 @@ const CurrentCathegory = ({
 
     return(
         <div className="flex-column-left col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <ScrollFunc/>
             <div className="box box-cut"><img className="box-img" src={event.image} alt="" />
                 <div className="links-panel flex-row-between">
                     <a href=""><i className="fas fa-search"></i></a>

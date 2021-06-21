@@ -8,6 +8,7 @@ import EventPage from './Events/EventPage/EventPage'
 import EventFilterPage from './Events/EventFilterPage/EventFilterPage'
 import './main.css'
 import Contacts from './Contacts/Contacts'
+import ScrollFunc from '../../Components/ScrollFunc'
 
 const Main = () => {
 
@@ -26,6 +27,7 @@ const Main = () => {
 
     return (
         <main className="main">
+            <ScrollFunc/>
             <Route path="/" exact component={About}/>
             <Route path="/" exact component={SectionSeparator}/>
             <Route path="/" exact render={() => (

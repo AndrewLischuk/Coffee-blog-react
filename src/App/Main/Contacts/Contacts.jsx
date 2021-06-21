@@ -3,10 +3,12 @@ import map from "../../../assets/Images/map.png"
 import facebookIcon from "../../../assets/Images/Profile-icons/facebook-icon.png"
 import linkedIcon from "../../../assets/Images/Profile-icons/linked-icon.png"
 import twitIcon from "../../../assets/Images/Profile-icons/twit-icon.png"
+import ScrollFunc from "../../../Components/ScrollFunc"
 
 const Contacts = () => {
     return (
         <div className="container contacts" style={{marginTop: '80px'}}>
+            <ScrollFunc/>
             <div className="row">
                 <div className="flex-row-between">
                     <div className="flex-column-center col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">

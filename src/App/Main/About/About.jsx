@@ -2,10 +2,12 @@ import React from 'react'
 import Separator from '../../Separator/Separator'
 import pic1 from './about-pic1.jpg'
 import pic2 from './about-pic2.jpg'
+import ScrollFunc from '../../../Components/ScrollFunc'
 
 const About = () => {
     return (
-        <section className="about-top">            
+        <section className="about-top">
+            <ScrollFunc/>            
             <div className="container">
                 <div className="row article flex-row-between" style={{ marginTop: '100px' }}>
                     <div className="box-cut col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
