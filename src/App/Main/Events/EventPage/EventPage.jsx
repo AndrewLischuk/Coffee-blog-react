@@ -1,13 +1,13 @@
 import { keys } from 'lodash'
+import { connect } from 'react-redux'
 import React from 'react'
 import eventsBase, { getEventsObj } from '../eventsBase'
 import CurrentEvent from './CurrentEvent'
 
 const EventPage = ({
     eventKey,
-    eventObj = getEventsObj(eventsBase),
-    handleEventKey,                    
-    handleCathegoryKey
+    eventObj = getEventsObj(eventsBase),                    
+    
 }) => {
     return (
         <>
@@ -16,8 +16,6 @@ const EventPage = ({
                     <CurrentEvent
                         key={eventId}
                         event={eventObj[eventId]}
-                        handleEventKey={handleEventKey}                    
-                        handleCathegoryKey={handleCathegoryKey}
                     />
                 ))                
             }            
@@ -25,4 +23,11 @@ const EventPage = ({
     )
 }
 
-export default EventPage
+const mapStateToProps = (state) => ({
+    eventKey: state.eventsKeyState
+})
+
+
+export default connect(
+    mapStateToProps,
+) (EventPage)

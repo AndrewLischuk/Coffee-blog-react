@@ -2,6 +2,7 @@ import { Testimonials } from '../../../../Components/Testimonials/Testimonials'
 import Separator from '../../../Separator/Separator'
 import '../../../../Components/Testimonials/testimonials.css'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 import ScrollFunc from '../../../../Components/ScrollFunc'
 import Likes from '../../../../Components/Likes/Likes'
 
@@ -13,13 +14,7 @@ const CurrentEvent = ({
         <div className="flex-column-center" style={{marginTop: "50px"}}>
             <ScrollFunc/>
             <div className="flex-column-left col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                <div className="box box-cut"><img className="box-img" src={event.image} alt="" style={{maxHeight: "fit-content"}} />
-                    <div className="links-panel flex-row-between">
-                        <a href=""><i className="fas fa-search"></i></a>
-                        <a href=""><i className="fas fa-link"></i></a>
-                    </div>
-                    <div className="box-overlay"></div>
-                </div>
+                <div className="box box-cut"><img className="box-img" src={event.image} alt="" style={{maxHeight: "fit-content"}}/></div>
                 <div className="event-block">
                     <div className="cathegory-ev">Cathegory: 
                         <Link to={`/event/cathegory_${event.cathegory}`} onClick={() => handleCathegoryKey(event.cathegory)}><span> {event.cathegory}</span></Link>
@@ -48,4 +43,14 @@ const CurrentEvent = ({
     )
 }
 
-export default CurrentEvent 
+const mapDispatchToProps = (dispatch) => ({    
+    handleCathegoryKey:(cathegory) => dispatch({
+        type:"HANDLE_CATHEGORY_KEY",
+        cathegory,
+    }),      
+})    
+
+export default connect (
+    null,
+    mapDispatchToProps,
+) (CurrentEvent)

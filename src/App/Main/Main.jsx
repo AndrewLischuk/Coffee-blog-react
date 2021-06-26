@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import { Route } from 'react-router'
 import SectionSeparator from '../SectionSeparator/SectionSeparator'
 import About from './About/About'
@@ -10,54 +9,18 @@ import './main.css'
 import Contacts from './Contacts/Contacts'
 import ScrollFunc from '../../Components/ScrollFunc'
 
-const Main = () => {
-
-    const [eventKey, setEventKey] = useState(0)
-
-    const handleEventKey = (id, likesCount) => {
-        setEventKey({
-            [id] : likesCount
-        })
-    }
-    const [cathegoryKey, setCathegoryKey] = useState ("")
-
-    const handleCathegoryKey = (cathegory) => {
-        setCathegoryKey(cathegory)        
-    }
-
+const Main = () => { 
+    
     return (
         <main className="main">
             <ScrollFunc/>
             <Route path="/" exact component={About}/>
             <Route path="/" exact component={SectionSeparator}/>
-            <Route path="/" exact render={() => (
-                <Events
-                    handleEventKey={handleEventKey}                    
-                    handleCathegoryKey={handleCathegoryKey}
-                />
-            )}/>            
+            <Route path="/" exact component={Events}/>                          
             <Route path="/about" exact component={AboutPage}/>
-            <Route path="/events" exact render={() => (
-                <Events
-                    handleEventKey={handleEventKey}                    
-                    handleCathegoryKey={handleCathegoryKey}                                        
-                />
-            )}/>
-            <Route path="/event_:id" exact render={() => (
-                <EventPage
-                    eventKey={eventKey}
-                    handleEventKey={handleEventKey}                    
-                    handleCathegoryKey={handleCathegoryKey}
-                />
-            )}/>
-            <Route path="/event/cathegory_:cathegory" exact render={() => (
-                <EventFilterPage
-                eventKey={eventKey}
-                cathegoryKey={cathegoryKey}
-                handleEventKey={handleEventKey}                    
-                handleCathegoryKey={handleCathegoryKey}
-                />
-            )}/>
+            <Route path="/events" exact component={Events}/>                
+            <Route path="/event_:id" exact component={EventPage}/>                
+            <Route path="/event/cathegory_:cathegory" exact component={EventFilterPage}/>                
             <Route path="/contacts" exact component={Contacts}/>
         </main>
     )    

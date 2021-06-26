@@ -1,5 +1,5 @@
 import { keys } from 'lodash'
-import React from 'react'
+import { connect } from 'react-redux'
 import eventsBase, { getEventsObj } from '../eventsBase'
 import CurrentCathegory from '../EventFilterPage/CurrentCathegory'
 import '../events.css'
@@ -7,8 +7,6 @@ import '../events.css'
 const EventFilterPage = ({    
     cathegoryKey,
     eventObj = getEventsObj(eventsBase),
-    handleEventKey,                    
-    handleCathegoryKey
 }) => {
    
     let force = eventsBase.filter((obj) => obj.cathegory === cathegoryKey)          
@@ -22,9 +20,7 @@ const EventFilterPage = ({
                             keys(getEventsObj(force)).map(eventId => (
                                     <CurrentCathegory
                                         key={eventId}
-                                        event={eventObj[eventId]}
-                                        handleEventKey={handleEventKey}                    
-                                        handleCathegoryKey={handleCathegoryKey} 
+                                        event={eventObj[eventId]} 
                                     />
                                 ))                                                   
                         }            
@@ -35,4 +31,10 @@ const EventFilterPage = ({
     )
 }
 
-export default EventFilterPage
+const mapStateToProps = (state, {id}) => ({
+    cathegoryKey: state.eventsKeyState[id]
+})
+export default connect(
+    mapStateToProps,
+) (EventFilterPage)
+

@@ -51,7 +51,6 @@ const Contacts = () => {
                         </div>
                         <div className="comment-send col-xs-12">                                    
                             <input 
-                                className="" 
                                 type="text" 
                                 placeholder="Subject"
                             />

@@ -12,7 +12,6 @@ import { Route } from 'react-router'
 import HeaderAbout from './Header/HeaderAbout'
 import HeaderEvents from './Header/HeaderEvents'
 import HeaderContact from './Header/HeaderContact'
-import ScrollFunc from '../Components/ScrollFunc'
 
 const App = () => {
     return (

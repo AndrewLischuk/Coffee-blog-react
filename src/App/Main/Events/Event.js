@@ -1,4 +1,4 @@
-import React from 'react'
+import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import Likes from '../../../Components/Likes/Likes'
 
@@ -16,9 +16,7 @@ const Event = ({
     isLiked,
     addLike,
     removeLike
-}) => {
-
-    
+}) => {  
 
     return (
         <div className="flex-column-left col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
@@ -52,4 +50,19 @@ const Event = ({
         )
     }
 
-export default Event
+const mapDispatchToProps = (dispatch) => ({
+    handleEventKey:(id, likesCount) => dispatch({
+        type:"HANDLE_EVENT_KEY",
+        id,
+        likesCount,
+    }),
+    handleCathegoryKey:(cathegory) => dispatch({
+        type:"HANDLE_CATHEGORY_KEY",
+        cathegory,
+    }),    
+})    
+
+export default connect (
+    null,
+    mapDispatchToProps,
+) (Event)

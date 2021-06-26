@@ -1,4 +1,4 @@
-import React from 'react'
+import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import ScrollFunc from '../../../../Components/ScrollFunc'
 import Likes from '../../../../Components/Likes/Likes'
@@ -43,4 +43,19 @@ const CurrentCathegory = ({
     )
 }
 
-export default CurrentCathegory
+const mapDispatchToProps = (dispatch) => ({
+    handleEventKey:(id, likesCount) => dispatch({
+        type:"HANDLE_EVENT_KEY",
+        id,
+        likesCount,
+    }),
+    handleCathegoryKey:(cathegory) => dispatch({
+        type:"HANDLE_CATHEGORY_KEY",
+        cathegory,
+    }),      
+})    
+
+export default connect (
+    null,
+    mapDispatchToProps,
+) (CurrentCathegory)

@@ -22,7 +22,7 @@ const Likes = ({
 }
 
 const mapStateToProps = (state, {id}) => ({
-    isLiked: state[id]
+    isLiked: state.eventsLikeState[id]
 })
 
 const mapDispatchToProps = (dispatch, {id}) => ({
@@ -37,6 +37,6 @@ const mapDispatchToProps = (dispatch, {id}) => ({
 })
 
 export default connect (
-mapStateToProps,
-mapDispatchToProps
+    mapStateToProps,
+    mapDispatchToProps
 ) (Likes)
