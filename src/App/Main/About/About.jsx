@@ -9,7 +9,7 @@ const About = () => {
         <section className="about-top">
             <ScrollFunc/>            
             <div className="container">
-                <div className="row article flex-row-between" style={{ marginTop: '100px' }}>
+                <div className="row article flex-row-between">
                     <div className="box-cut col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
                         <img src={pic1} alt="" className="box-img"/>
                     </div>

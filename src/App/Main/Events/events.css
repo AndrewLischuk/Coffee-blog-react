@@ -87,6 +87,7 @@
 .title-ev {
     font-size: 25px;
     color: #2f2721;
+    line-height: 1.25;
 }
 .text-ev {
     hyphens: auto;

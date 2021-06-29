@@ -10,7 +10,7 @@ const Contacts = () => {
         <div className="container contacts" style={{marginTop: '80px'}}>
             <ScrollFunc/>
             <div className="row">
-                <div className="flex-row-between">
+                <div className="flex-row-between-stretch">
                     <div className="flex-column-center col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                         <div><img src={map} alt=""/></div>
                         <p className="cathegory-ev">BeCoffee<br />
@@ -28,7 +28,7 @@ const Contacts = () => {
                             <div className="profile-icon flex-column-center"><a href=""><img src={twitIcon} alt=""/></a></div>
                         </div>
                     </div>
-                    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6303.668968333661!2d144.9523743!3d-37.8173457!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sru!2sua!4v1623342361847!5m2!1sru!2sua" width="100%" height="450" style={{border: 0}} allowfullscreen="" loading="lazy"></iframe></div>
+                    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6303.668968333661!2d144.9523743!3d-37.8173457!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sru!2sua!4v1623342361847!5m2!1sru!2sua" width="100%" height="450" style={{border: 0}} allowFullScreen="0" loading="lazy"></iframe></div>
                 </div>
                 <div className="flex-column-center" style={{marginTop: '80px'}}>
                     <p className="title-ev">Send us a message</p>

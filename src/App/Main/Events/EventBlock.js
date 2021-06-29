@@ -2,10 +2,7 @@ import React from 'react'
 import Event from './Event'
 import eventsBase from './eventsBase'
 
-const EventBlock = ({
-    handleEventKey,
-    handleCathegoryKey
-}) => {
+const EventBlock = () => {
     return (
         <>
         {
@@ -29,8 +26,6 @@ const EventBlock = ({
                     title={title}
                     text={text}
                     likesCount={likesCount}
-                    handleEventKey={handleEventKey}
-                    handleCathegoryKey={handleCathegoryKey}
                 />
             ))
         }

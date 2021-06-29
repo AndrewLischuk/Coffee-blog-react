@@ -10,8 +10,9 @@ const EventFilterPage = ({
 }) => {
    
     let force = eventsBase.filter((obj) => obj.cathegory === cathegoryKey)          
-
+    {console.log(cathegoryKey)}
     return (
+        
         <div style={{marginTop: '80px'}}>
             <div className="container">
                 <div className="row">
@@ -31,10 +32,10 @@ const EventFilterPage = ({
     )
 }
 
-const mapStateToProps = (state, {id}) => ({
-    cathegoryKey: state.eventsKeyState[id]
+const mapStateToProps = (state) => ({
+    cathegoryKey: state.eventsKeyState.cathegory
 })
 export default connect(
-    mapStateToProps,
+    mapStateToProps
 ) (EventFilterPage)
 

@@ -1,0 +1,23 @@
+.home {   
+    background-origin: border-box;
+    background-size: cover;
+    background-position: center;
+}
+.home-video-block {
+    background-image: url(../../../assets/HomePage/home_coffee_backgrnd.png);
+}
+
+.home-checklist {
+    background-image: url(../../../assets/HomePage/home_coffee_backgrnd2.jpg);
+    padding-bottom: 45px;
+}
+.checklist-block {
+    padding: 5%;
+    background-color: #fff;
+}
+.checklist-block p {
+    padding: 5% 0;
+}
+.checklist-block li {
+    padding: 2% 5%;
+}

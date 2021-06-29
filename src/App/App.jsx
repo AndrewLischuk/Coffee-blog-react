@@ -25,7 +25,6 @@ const App = () => {
                 <Route path="/contacts" exact component={HeaderContact}/>                    
             <SectionSeparator/>           
             <Main/>
-            <SectionSeparator/>
             <Footer/>  
         </>
     )

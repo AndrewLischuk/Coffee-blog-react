@@ -7,6 +7,11 @@ export const eventsKeyReducer = (state = {}, action) => {
                 [action.id]: action.likesCount
             }
         }
+        case "HANDLE_CATHEGORY_KEY": {
+            return {
+                cathegory: action.cathegory
+            }
+        }
         default:
             return state
     }
