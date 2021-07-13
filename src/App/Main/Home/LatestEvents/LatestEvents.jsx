@@ -10,25 +10,23 @@ const LatestEvents = ({
    
     let latest = eventsBase.filter((obj) => obj.id >= Object.keys(obj).length - 1 )          
 
-    return (
-        <div>
-            <div className="container">
-                <div className="row flex-column-center">
-                    <div className="title-section" style={{padding: "30px 0"}}><span>Our Latest Events</span></div>
-                    <section className="events flex-row-between">
-                        {                
-                            keys(getEventsObj(latest)).map(eventId => (
-                                    <CurrentCathegory
-                                        key={eventId}
-                                        event={eventObj[eventId]} 
-                                    />
-                                ))                                                   
-                        }            
-                    </section>
-                    <button className="alt-btn"><Link to="/events">SHOW MORE</Link></button>
-                </div>
+    return (        
+        <div className="container">
+            <div className="row flex-column-center">
+                <div className="title-section" style={{padding: "30px 0"}}><span>Our Latest Events</span></div>
+                <section className="events flex-row-between">
+                    {                
+                        keys(getEventsObj(latest)).map(eventId => (
+                                <CurrentCathegory
+                                    key={eventId}
+                                    event={eventObj[eventId]} 
+                                />
+                            ))                                                   
+                    }            
+                </section>
+                <button className="alt-btn"><Link to="/events">SHOW MORE</Link></button>
             </div>
-        </div>
+        </div>        
     )
 }
 

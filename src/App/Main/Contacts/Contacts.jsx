@@ -23,9 +23,9 @@ const Contacts = () => {
                         <a href=""><span> +61 (0) 3 8376 6284</span></a></p>
                         <h1 className="cathegory-ev">Our Profiles:</h1>
                         <div className="flex-row-between">  
-                            <div className="profile-icon flex-column-center"><a href="" className=""><img src={facebookIcon} alt="" className="box-img"/></a></div>
-                            <div className="profile-icon flex-column-center"><a href=""><img src={linkedIcon} alt=""/></a></div>
-                            <div className="profile-icon flex-column-center"><a href=""><img src={twitIcon} alt=""/></a></div>
+                            <div className="profile-icon flex-column-center"><a href="https://www.facebook.com/" className=""><img src={facebookIcon} alt="" className="box-img"/></a></div>
+                            <div className="profile-icon flex-column-center"><a href="https://www.linkedin.com/"><img src={linkedIcon} alt=""/></a></div>
+                            <div className="profile-icon flex-column-center"><a href="https://twitter.com/"><img src={twitIcon} alt=""/></a></div>
                         </div>
                     </div>
                     <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6303.668968333661!2d144.9523743!3d-37.8173457!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sru!2sua!4v1623342361847!5m2!1sru!2sua" width="100%" height="450" style={{border: 0}} allowFullScreen="0" loading="lazy"></iframe></div>
