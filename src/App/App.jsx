@@ -21,6 +21,7 @@ const App = () => {
                 <Route path="/" exact component={Header}/>
                 <Route path="/about" exact component={HeaderAbout}/>
                 <Route path="/menu" exact component={HeaderMenu}/>
+                <Route path="/cart" exact component={HeaderMenu}/>
                 <Route path="/events" exact component={HeaderEvents}/>
                 <Route path="/event_:id" exact component={HeaderEvents}/>                
                 <Route path="/event/cathegory_:cathegory" exact component={HeaderEvents}/>                

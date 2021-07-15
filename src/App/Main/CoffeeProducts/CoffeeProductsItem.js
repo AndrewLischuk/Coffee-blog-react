@@ -1,5 +1,5 @@
-import { values } from "lodash"
 import { useState } from "react"
+import { connect } from "react-redux"
 
 
 
@@ -9,30 +9,32 @@ const CoffeeProductsItem = ({
     title,
     text,
     price,
+    addCup,
 }) => {
 
-    const [cupsInCart, setCupsInCart] = useState (0)
+    const [cupsInCart, setCupsInCart] = useState (1)
     
     const [activateCartCount, setActivateCartCount] = useState (" deactivate-el")
 
-    const addCups = () => {
-        setCupsInCart(value => (
-            value + 1
-        ))
+    // const addCup = (id) => {
+    //     setCupsInCart(value => (
+    //         value + 1
+    //     ))
 
-        if (cupsInCart >= 0) {
-            setActivateCartCount(" ")
-        } else {
-            setActivateCartCount(" deactivate-el")
-        }
-    }
-    const removeCups = () => {
-        setCupsInCart(value => (
-            value - 1
-        ))
-    }
+    //     if (cupsInCart >= 0) {
+    //         setActivateCartCount(" ")
+    //     } else {
+    //         setActivateCartCount(" deactivate-el")
+    //     }
+    //     addCoffee(id, cupsInCart)
+    // }
+    // const removeCups = () => {
+    //     setCupsInCart(value => (
+    //         value - 1
+    //     ))
+    // }
 
-    
+    console.log(cupsInCart)
 
     return (        
         <div className="flex-row-between" style={{width: "100%"}}>                                   
@@ -44,8 +46,8 @@ const CoffeeProductsItem = ({
                 <span>$ {price}</span>
             </div>
             <div className="flex-column-center col-xs-3 col-sm-3 col-md-3 col-lg-2 col-xl-2">
-                <div className="add-btn flex-column-center" onClick={() => addCups()}>
-                    <i className="fas fa-cart-plus"></i>
+                <div className="add-btn flex-column-center" onClick={() => addCup(id, cupsInCart)}>
+                    <i class="fas fa-plus-circle"></i>
                     <div className={"cart-count" + activateCartCount}>{cupsInCart}</div>
                 </div>
             </div>                                                               
@@ -53,4 +55,15 @@ const CoffeeProductsItem = ({
     )
 }
 
-export default CoffeeProductsItem
+const mapDispatchToProps = (dispatch) => ({
+    addCup:(id, cupsInCart) => dispatch({
+        type:"ADD_CUP_TO_CART",
+        id,
+        cupsInCart,
+    }),
+})
+
+export default connect (
+    null,
+    mapDispatchToProps
+) (CoffeeProductsItem)

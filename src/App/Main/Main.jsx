@@ -11,6 +11,7 @@ import ScrollFunc from '../../Components/ScrollFunc'
 import Home from './Home/Home'
 import LatestEvents from './Home/LatestEvents/LatestEvents'
 import CoffeeProducts from './CoffeeProducts/CoffeeProducts'
+import Cart from '../../Components/Cart/Cart'
 
 const Main = () => { 
     
@@ -28,6 +29,7 @@ const Main = () => {
             <Route path="/event_:id" exact component={EventPage}/>                
             <Route path="/event/cathegory_:cathegory" exact component={EventFilterPage}/>                
             <Route path="/contacts" exact component={Contacts}/>
+            <Route path="/cart" exact component={Cart}/>
         </main>
     )    
 }

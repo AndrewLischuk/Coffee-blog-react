@@ -10,18 +10,18 @@
     padding: 15px;
 }
 .add-btn {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     padding: 0;
     color: #e68541;
-    font-size: 20px;
+    font-size: 30px;
     border: 1px solid #e68541;
-    border-radius: 25px;
+    border-radius: 20px;
     text-align: center;
-    position: relative;
-    z-index: 5;
+    /* position: relative;
+    z-index: 5; */
 }
-.cart-count {
+/* .cart-count {
     width: 26px;
     height: 26px;
     color: #fff;
@@ -33,16 +33,31 @@
     border-radius: 13px;
     line-height: 1.2;
     z-index: 6;
-}
+} */
 .add-btn:hover {
     color: #fff;
     background-color: #e68541;
+    border: 1px solid #e68541;
 }
 .add-btn:active {
     border: 1px solid #fff;
 }
-.add-btn:hover .cart-count {
+.input-count {
+    width: 20px;
+    height: 40px;
+    /* border: 1px solid #e68541; */
+    margin: 0 5px;    
+}
+.input-count>input {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0;
     color: #e68541;
-    background-color: #fff;
-    border: 1px solid #e68541;
+    border: none;
+}
+.input-count>input:focus {    
+    outline: none;
+    outline-offset: 0;
+    border: none;
 }
