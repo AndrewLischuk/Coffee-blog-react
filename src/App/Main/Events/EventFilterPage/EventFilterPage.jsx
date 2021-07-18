@@ -1,16 +1,16 @@
 import { keys } from 'lodash'
-import { connect } from 'react-redux'
 import eventsBase, { getEventsObj } from '../eventsBase'
 import CurrentCathegory from '../EventFilterPage/CurrentCathegory'
 import '../events.css'
 
-const EventFilterPage = ({    
-    cathegoryKey,
+const EventFilterPage = ({
     eventObj = getEventsObj(eventsBase),
+    match
 }) => {
-   
-    let force = eventsBase.filter((obj) => obj.cathegory === cathegoryKey)          
-    {console.log(cathegoryKey)}
+
+    const cathegory = match.params.cathegory   
+    const selectedCathegory = eventsBase.filter((obj) => obj.cathegory === cathegory)
+
     return (
         
         <div style={{marginTop: '80px'}}>
@@ -18,7 +18,9 @@ const EventFilterPage = ({
                 <div className="row">
                     <section className="events flex-row-between">
                         {                
-                            keys(getEventsObj(force)).map(eventId => (
+                            keys(getEventsObj(selectedCathegory)).slice(0)
+                            .reverse()
+                            .map(eventId => (
                                     <CurrentCathegory
                                         key={eventId}
                                         event={eventObj[eventId]} 
@@ -32,10 +34,5 @@ const EventFilterPage = ({
     )
 }
 
-const mapStateToProps = (state) => ({
-    cathegoryKey: state.eventsKeyState.cathegory
-})
-export default connect(
-    mapStateToProps
-) (EventFilterPage)
+export default EventFilterPage
 

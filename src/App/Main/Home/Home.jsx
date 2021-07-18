@@ -11,16 +11,16 @@ const Home = () => {
                 <div className="row">
                     <div className="flex-row-between-stretch">
                         <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 flex-column-spaced-evently">
-                            <div className="box-cut"><img className="box-img" src={homeCoffeeIcon}></img></div>
+                            <div className="box-cut"><img className="box-img" src={homeCoffeeIcon} alt=""></img></div>
                             <div className="title-ev">Fusce interdum justo quis libero ultricies</div>
                             <Separator/>
                             <div className="text-ev">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros.</div>
                         </div>
-                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 box-cut"><img className="box-img" src={homeCoffeeCup}></img></div>
+                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 box-cut"><img className="box-img" src={homeCoffeeCup} alt=""></img></div>
                         <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 flex-column-spaced-evently">
                             <div className="title-ev"><span>Fusce ut velit</span></div>                            
                             <div className="title-section">$ 15,99</div>
-                            <div className="box-cut"><img className="box-img" src={homeCoffeePackage}></img></div>
+                            <div className="box-cut"><img className="box-img" src={homeCoffeePackage} alt=""></img></div>
                         </div>
                     </div>                    
                 </div>
@@ -29,7 +29,7 @@ const Home = () => {
                     <div className="container">
                         <div className="row flex-row-between">
                             <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 flex-column-center box-cut" style={{height: '400px'}}>                                
-                                <iframe className="box-img" src="https://player.vimeo.com/video/58010546?autoplay=1&color=ff9933&title=0&byline=0&portrait=0"  frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>                                
+                                <iframe className="box-img" title="player" src="https://player.vimeo.com/video/58010546?autoplay=1&color=ff9933&title=0&byline=0&portrait=0"  frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>                                
                                 <script src="https://player.vimeo.com/api/player.js"></script>
                             </div>                                                    
                             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">

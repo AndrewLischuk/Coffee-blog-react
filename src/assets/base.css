@@ -29,6 +29,12 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+.flex-row-between-reversed {
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content: space-between;
+    align-items: center;
+}
 .flex-row-center {
     display: flex;
     flex-flow: row wrap;

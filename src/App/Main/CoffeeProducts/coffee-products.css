@@ -18,22 +18,7 @@
     border: 1px solid #e68541;
     border-radius: 20px;
     text-align: center;
-    /* position: relative;
-    z-index: 5; */
 }
-/* .cart-count {
-    width: 26px;
-    height: 26px;
-    color: #fff;
-    background-color: #e68541;
-    position: absolute;
-    right: -8px;
-    top: -8px;
-    border: 1px solid #fff;
-    border-radius: 13px;
-    line-height: 1.2;
-    z-index: 6;
-} */
 .add-btn:hover {
     color: #fff;
     background-color: #e68541;
@@ -45,7 +30,6 @@
 .input-count {
     width: 20px;
     height: 40px;
-    /* border: 1px solid #e68541; */
     margin: 0 5px;    
 }
 .input-count>input {

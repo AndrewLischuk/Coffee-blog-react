@@ -1,13 +1,13 @@
 import { connect } from "react-redux"
-
+import Quantity from "./Quantity"
 
 const CartItem = ({
     coffeeProduct,
-    productCount,
+    productsInCart,
     incrementCount,
     decrementCount,
-    mincount,
-}) => {
+    removeCupFromCart
+}) => { 
     return (
         <div className="container">
             <div className="row flex-row-center">
@@ -17,20 +17,14 @@ const CartItem = ({
                         
                     </div>
                     <div className="flex-row-center col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">                        
-                        <button className="add-btn flex-row-center" 
-                            onClick={() => decrementCount(coffeeProduct.id, productCount)}
-                            disabled={productCount <= 1}>
-                            <i class="fas fa-chevron-circle-left"></i>
-                        </button>
-                        <div className="input-count flex-column-center"><input value={productCount} readOnly></input></div>
-                        <button className="add-btn flex-row-center" 
-                            onClick={() => incrementCount(coffeeProduct.id, productCount)}
-                            disabled={productCount >= 5}>
-                            <i class="fas fa-chevron-circle-right"></i>
-                        </button>                        
+                        <Quantity
+                           productsInCart={productsInCart}
+                           onIncrementCount={() => incrementCount(coffeeProduct.id, productsInCart.productCount)}
+                           onDecrementCount={() => (productsInCart.productCount === 1) ? removeCupFromCart(coffeeProduct.id) : decrementCount(coffeeProduct.id, productsInCart.productCount)} 
+                        />                        
                     </div>
                     <div className="title-menu flex-column-center col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                        <span>$ {coffeeProduct.price * productCount}</span>
+                        <span>$ {coffeeProduct.price * productsInCart.productCount}</span>
                     </div>
                                                                                    
                 </div>
@@ -49,10 +43,21 @@ const mapDispatchToProps = (dispatch) => ({
         type:"DECREMENT_COUNT",
         id,
         cupsInCart,
-    })
+    }),
+    removeCupFromCart:(id) => {
+        dispatch({
+            type:"REMOVE_CUP_FROM_CART",
+            id,
+        })
+        dispatch({
+            type:"REMOVED",
+            id,  
+        })
+    }
 })
 
 export default connect (
+    // 
     null,
     mapDispatchToProps    
 ) (CartItem)

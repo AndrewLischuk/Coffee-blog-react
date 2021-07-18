@@ -1,24 +1,24 @@
-
 import { keys } from "lodash"
 import { connect } from "react-redux"
 import coffeeProductsBase from "../../App/Main/CoffeeProducts/coffeeProductsBase"
 import { getProductsObj } from "../getProductsObj"
 import CartItem from "./CartItem"
+import ScrollFunc from "../ScrollFunc"
 
 
 const Cart = ({
-    products,
-    productsObj = getProductsObj (coffeeProductsBase)
+    productsInCart,
+    productsObj = getProductsObj(coffeeProductsBase)
 }) => {
-    
     return (
         <>
+        <ScrollFunc/>
             {
-                keys(products).map(productId => (
+                keys(productsInCart).map(productId => (
                     <CartItem
                         key={productId}
                         coffeeProduct={productsObj[productId]}
-                        productCount={products[productId]}
+                        productsInCart={productsInCart[productId]}
                     />
                 ))
             }
@@ -27,7 +27,7 @@ const Cart = ({
 }
 
 const mapStateToProps = (state) => ({
-    products: state.coffeeInCartState
+    productsInCart: state.coffeeInCartState
 })
 
 export default connect (

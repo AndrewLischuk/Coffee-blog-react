@@ -1,13 +1,10 @@
-import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import ScrollFunc from '../../../../Components/ScrollFunc'
 import Likes from '../../../../Components/Likes/Likes'
 
 
 const CurrentCathegory = ({
-    event,
-    handleCathegoryKey,
-    handleEventKey,
+    event
 }) => {
 
     return(
@@ -16,13 +13,13 @@ const CurrentCathegory = ({
             <div className="box box-cut"><img className="box-img" src={event.image} alt="" />
                 <div className="links-panel flex-row-between">
                     <a href=""><i className="fas fa-search"></i></a>
-                    <Link to={`/event_${event.id}`}  onClick={() => handleEventKey(event.id, event.likesCount)}><i className="fas fa-link"></i></Link>
+                    <Link to={`/event_${event.id}`}><i className="fas fa-link"></i></Link>
                 </div>
                 <div className="box-overlay"></div>
             </div>
             <div className="event-block">
                 <div className="cathegory-ev">Cathegory: 
-                    <Link to={`/event/cathegory_${event.cathegory}`} onClick={() => handleCathegoryKey(event.cathegory)}><span> {event.cathegory}</span></Link>
+                    <Link to={`/event/cathegory_${event.cathegory}`}><span> {event.cathegory}</span></Link>
                 </div>
                 <div className="date-ev"><i className="fas fa-user-tie"></i> <a href=""><span>{event.author}</span> </a>at <i className="far fa-clock"></i> <a href=""><span>{event.date}</span></a> </div>
                 <div className="title-ev">{event.title}</div>
@@ -35,7 +32,7 @@ const CurrentCathegory = ({
                         addLike={event.addLike}
                         removeLike={event.removeLike}
                     />                    
-                    <Link to={`/event_${event.id}`} onClick={() => handleEventKey(event.id, event.likesCount)}><span><i
+                    <Link to={`/event_${event.id}`}><span><i
                         className="far fa-file-alt"></i> Read more</span></Link>
                 </div>
             </div>
@@ -43,19 +40,4 @@ const CurrentCathegory = ({
     )
 }
 
-const mapDispatchToProps = (dispatch) => ({
-    handleEventKey:(id, likesCount) => dispatch({
-        type:"HANDLE_EVENT_KEY",
-        id,
-        likesCount,
-    }),
-    handleCathegoryKey:(cathegory) => dispatch({
-        type:"HANDLE_CATHEGORY_KEY",
-        cathegory,
-    }),      
-})    
-
-export default connect (
-    null,
-    mapDispatchToProps,
-) (CurrentCathegory)
+export default CurrentCathegory

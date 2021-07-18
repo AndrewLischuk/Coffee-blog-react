@@ -3,18 +3,20 @@ import Event from './Event'
 import eventsBase from './eventsBase'
 
 const EventBlock = () => {
-    return (
+    return (        
         <>
         {
-            eventsBase.map(({
-                id,
-                image,
-                cathegory,
-                author,
-                date,
-                title,
-                text,
-                likesCount,                
+            eventsBase.slice(0)
+            .reverse()
+            .map(({
+                    id,
+                    image,
+                    cathegory,
+                    author,
+                    date,
+                    title,
+                    text,
+                    likesCount,                
             }) => (
                 <Event 
                     key={id}

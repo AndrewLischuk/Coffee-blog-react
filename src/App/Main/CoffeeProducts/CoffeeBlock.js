@@ -2,13 +2,13 @@ import Separator from "../../Separator/Separator"
 import coffeeProductsBase from "./coffeeProductsBase"
 import CoffeeProductsItem from "./CoffeeProductsItem"
 
-const CoffeeBlock = () => {
+const CoffeeBlock = () => {    
     return (
-        <>
+        <>        
             <div className="title-ev coffee-list">
                 <span>Classic Coffee</span>
                 <Separator/>
-            </div>
+            </div>            
             {
                 coffeeProductsBase.filter(item => item.cathegory === "Classic Coffee") 
                 .map(({
@@ -33,6 +33,7 @@ const CoffeeBlock = () => {
                 <Separator/>
             </div>
             {
+                
                 coffeeProductsBase.filter(item => item.cathegory === "Flavored Coffee") 
                 .map(({
                     id,
