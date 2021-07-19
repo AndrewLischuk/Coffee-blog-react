@@ -8,7 +8,7 @@ const CoffeeProducts = () => {
         <>
             <ScrollFunc/>
             <div className="container">
-                <div className="row flex-column-left" style={{margin: '80px 0'}}>
+                <div className="row flex-column-left fade-in coffee-list-backgrnd" style={{margin: '80px 0'}}>
                     <div className="flex-column-center col-xs-12 col-md-12">
                         <div className="title-section col-xs-11 col-sm-11 col-md-8 col-lg-8 col-xl-8">Lorem ipsum dolor sit amet</div>
                         <Separator/>

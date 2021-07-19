@@ -25,11 +25,12 @@ const Main = () => {
             <Route path="/"exact component={Home}/>                     
             <Route path="/about" exact component={AboutPage}/>
             <Route path="/menu" exact component={CoffeeProducts}/>
+            <Route path="/cart" exact component={CoffeeProducts}/>
+            <Route path="/checkout" exact component={CoffeeProducts}/>
             <Route path="/events" exact component={Events}/>                
             <Route path="/event_:id" exact component={EventPage}/>                
             <Route path="/event/cathegory_:cathegory" exact component={EventFilterPage}/>                
-            <Route path="/contacts" exact component={Contacts}/>
-            <Route path="/cart" exact component={Cart}/>
+            <Route path="/contacts" exact component={Contacts}/>            
         </main>
     )    
 }

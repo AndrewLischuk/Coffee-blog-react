@@ -1,6 +1,7 @@
 import './header.css'
 import Menu from './Menu/Menu'
 import Logo from './Logo/Logo'
+import Cart from '../../Components/Cart/Cart'
 
 
 const HeaderMenu = () => {
@@ -8,6 +9,7 @@ const HeaderMenu = () => {
         <header className="header header-menu"><a href="" name="home"></a>
             <div className="container">
                 <div className="row">
+                    {/* <Cart/> */}
                     <div className="section flex-column-left">
                         <div className="menu fade-in flex-row-between" style={{ width: '100%' }}>
                             <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">                                

@@ -1,3 +1,43 @@
+.cart {
+    width: 100%;
+    position: absolute;    
+    top: 100px;   
+    z-index: 9;
+}
+.cart-page {
+    margin: 15px auto;
+    background-color: rgba(214, 214, 214);
+    position: relative;
+}
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 10px;
+    font-size: 25px;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+.close-btn a {
+    color: #e68541;
+}
+.close-btn:hover {
+    border: 1px solid #e68541;
+    background-color: transparent;
+}
+.cart-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255, 0.75);
+    z-index: 8;
+    overflow: hidden;
+}
 .title-menu {
     font-weight: 600;
     font-size: 20px;
@@ -5,6 +45,9 @@
 .coffee-list {
     margin: 30px 0 10px 0;
     font-weight: 600;
+}
+.coffee-list-backgrnd {
+    background-image: url(../../../assets/HomePage/home_coffee_backgrnd.png);
 }
 .coffee-item {
     padding: 15px;
@@ -44,4 +87,30 @@
     outline: none;
     outline-offset: 0;
     border: none;
+}
+@media (max-width: 425px) {
+    .title-menu {
+        font-weight: 500;
+        font-size: 18px;
+    }
+    .add-btn {
+        width: 30px;
+        height: 30px;        
+        border-radius: 15px;
+        font-size: 25px;
+    }
+}
+@media (max-width: 320px) {
+    .title-menu {
+        font-weight: 500;
+        font-size: 15px;
+    }
+    .add-btn {
+        width: 26px;
+        height: 26px;        
+        border-radius: 13px;
+        font-size: 20px;
+    }.input-count {
+        margin: 0 1px;
+    }
 }

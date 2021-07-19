@@ -14,7 +14,7 @@ const EventPage = ({
     const id = match.params.id 
     return (
         <>
-            <div className="flex-column-center" style={{marginTop: "50px"}}>
+            <div className="flex-column-center fade-in" style={{marginTop: "50px"}}>
             <ScrollFunc/>
             <div className="flex-column-left col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <div className="box box-cut"><img className="box-img" src={event[id].image} alt="" style={{maxHeight: "fit-content"}}/></div>

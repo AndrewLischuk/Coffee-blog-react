@@ -85,7 +85,7 @@
     border-top: 1px solid #2f333b;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 769px) {
     .sticky-menu {
         display: flex;
     }
@@ -100,7 +100,7 @@
         transition: .5s ease-in-out;
     }
 }
-@media (min-width: 768px) {   
+@media (min-width: 992px) {   
     div.nav-mobile-menu-none {
         display: none;
     }

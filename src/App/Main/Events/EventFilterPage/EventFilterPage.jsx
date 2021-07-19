@@ -16,7 +16,7 @@ const EventFilterPage = ({
         <div style={{marginTop: '80px'}}>
             <div className="container">
                 <div className="row">
-                    <section className="events flex-row-between">
+                    <section className="events flex-row-between fade-in">
                         {                
                             keys(getEventsObj(selectedCathegory)).slice(0)
                             .reverse()

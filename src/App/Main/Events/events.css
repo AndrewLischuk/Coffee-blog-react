@@ -20,7 +20,8 @@
     transition: all .25s linear;
     z-index: 4;
 }
-.links-panel a {
+.links-panel div{
+    position: relative;
     display: block;
     width: 50%;
     padding: 15px;
@@ -29,12 +30,31 @@
     color: #fff;
     background-color: #e68641dc;
 }
-.links-panel a:first-child {
+.links-panel div:first-child {
     border-right: 1px solid #a8a8a8;
 }
-.links-panel a:hover {
+.links-panel div:hover {
     color: #e68641dc;
     background-color: #fff;
+}
+.copied-massage {
+    text-align: center;
+    width: 50%;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    right: 0;    
+    background-color: rgba(170, 170, 170, 0.75);
+    color: black;
+    z-index: 20;
+}
+.zoom-photo {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 8;    
+    overflow: hidden;
 }
 .events {
     align-items: flex-start;

@@ -7,7 +7,7 @@ import ScrollFunc from "../../../Components/ScrollFunc"
 
 const Contacts = () => {
     return (
-        <div className="container contacts" style={{marginTop: '80px'}}>
+        <div className="container contacts fade-in" style={{marginTop: '80px'}}>
             <ScrollFunc/>
             <div className="row">
                 <div className="flex-row-between-stretch">

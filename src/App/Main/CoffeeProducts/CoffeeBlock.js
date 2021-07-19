@@ -5,7 +5,7 @@ import CoffeeProductsItem from "./CoffeeProductsItem"
 const CoffeeBlock = () => {    
     return (
         <>        
-            <div className="title-ev coffee-list">
+            <div className="title-ev coffee-list fade-in">
                 <span>Classic Coffee</span>
                 <Separator/>
             </div>            

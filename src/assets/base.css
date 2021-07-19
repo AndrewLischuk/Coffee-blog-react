@@ -29,17 +29,17 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-.flex-row-between-reversed {
-    display: flex;
-    flex-flow: row-reverse wrap;
-    justify-content: space-between;
-    align-items: center;
-}
 .flex-row-center {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+}
+.flex-row-start {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
 }
 .flex-row-between-stretch {
     display: flex;
@@ -59,12 +59,14 @@ body {
     flex-flow: column;
     align-items: flex-start;
     justify-content: center;
+    text-align: left;
 }
 .flex-column-center {
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 .flex-column-bottom {
     display: flex;
@@ -116,6 +118,16 @@ button:focus {
 .alt-btn:hover {
     background-color: #b15615;
     transition: .25s;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff77;
+    z-index: 7;
+    /* transition: background-color .25s linear; */
 }
 .box {
     position: relative;    

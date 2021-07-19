@@ -1,3 +1,5 @@
+import { omit } from "lodash"
+
 export const addButtonReducer = (state = {}, action) => {
     switch(action.type) {
         case "ADDED":
@@ -10,6 +12,8 @@ export const addButtonReducer = (state = {}, action) => {
                 ...state,
                 [action.id]: false
             }
+        case "REMOVED_ALL":
+            return omit(state, action.id)
         default:
             return state
     }

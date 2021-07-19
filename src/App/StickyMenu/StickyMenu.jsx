@@ -31,7 +31,7 @@ const StickyMenu = () => {
                         <div className="logo col-xs-6">
                             <Logo/>    
                         </div>
-                        <div className="col-xs-3 col-sm-3 col-md-8 col-lg-8 col-xl-8">
+                        <div className="col-xs-3 col-sm-3 col-md-2 col-lg-8 col-xl-8">
                             <Menu
                                 hActivate={hActivate}
                                 deActivateH={deActivateH}

@@ -13,7 +13,7 @@ const LatestEvents = ({
     return (        
         <div className="container">
             <div className="row flex-column-center">
-                <div className="title-section" style={{padding: "30px 0"}}><span>Our Latest Events</span></div>
+                <div className="title-section fade-in" style={{padding: "30px 0"}}><span>Our Latest Events</span></div>
                 <section className="events flex-row-between">
                     {                
                         keys(getEventsObj(latest)).map(eventId => (

@@ -11,8 +11,8 @@ const CoffeeProductsItem = ({
 }) => {
     const cupsInCart = 1
     return (        
-        <div className="flex-row-between" style={{width: "100%"}}>                                   
-            <div className="col-xs-6 col-sm-6 col-md-7 col-lg-8 col-xl-8 coffee-item">
+        <div className="flex-row-between fade-in" style={{width: "100%"}}>                                   
+            <div className="col-xs-6 col-sm-6 col-md-6 col-lg-8 col-xl-8 coffee-item">
                 <p className="title-menu">{title}</p>
                 <p className="text-ev">{text}</p>
             </div>

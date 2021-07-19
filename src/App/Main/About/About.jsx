@@ -10,7 +10,7 @@ const About = () => {
         <section className="about-top">
             <ScrollFunc/>            
             <div className="container">
-                <div className="row article flex-row-between">
+                <div className="row article fade-in flex-row-between">
                     <div className="box-cut col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
                         <img src={pic1} alt="" className="box-img"/>
                     </div>
@@ -26,8 +26,7 @@ const About = () => {
                         <Separator/>
                         <p>Libero pharetra vel. Pellentesque lorem augue, fermentum nec nibh et, fringilla sollicitudin
                                     orci. Integer pharetra magna non ante blandit lobortis. Sed mollis.</p>
-                        <button className="alt-btn"><Link to="/menu">SEE MENU CART <i className="fas fa-chevron-down fa-xs"
-                            style={{ paddingLeft: '10px' }}></i></Link></button>
+                        <button className="alt-btn"><Link to="/menu">SEE MENU CART </Link></button>
                     </div>
                     <div className="box-cut col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                         <img src={pic2} alt="" className="box-img" />

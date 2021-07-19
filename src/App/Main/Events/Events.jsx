@@ -5,11 +5,11 @@ import ScrollFunc from '../../../Components/ScrollFunc'
 
 const Events = () => {
     return (
-        <div style={{marginTop: '80px'}}>
+        <div className="fade-in" style={{marginTop: '80px'}}>
             <ScrollFunc/>
             <div className="container">
                 <div className="row">
-                    <section className="events flex-row-between">
+                    <section className="events box flex-row-between">
                         <EventBlock/>
                     </section>
                 </div>
