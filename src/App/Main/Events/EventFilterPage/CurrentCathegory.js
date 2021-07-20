@@ -3,34 +3,33 @@ import ScrollFunc from '../../../../Components/ScrollFunc'
 import Likes from '../../../../Components/Likes/Likes'
 import { useState } from 'react'
 import CopyToClipboard from 'react-copy-to-clipboard'
+import Viewer from 'react-viewer'
 
 
 const CurrentCathegory = ({
     event
 }) => {
 
-    const eventUrl = `http://localhost:3000/event_${event.id}`
+    const eventUrl = `https://coffee-blog-react.netlify.app/event_${event.id}`
 
     const [copy, setCopy] = useState(" deactivate-el")
     const addedToClipboard = () => {
         setCopy(" activate-el")
         setTimeout(setCopy, 2000, " deactivate-el")
     }
-    const [zoomPhoto, setZoomPhoto] = useState(" deactivate-el")
-    const handlerPhoto = () => {
-        if(zoomPhoto === " deactivate-el") {
-            setZoomPhoto(" flex-column-center")
-        } else {
-            setZoomPhoto(" deactivate-el")
-        }
-    }
+    const [visible, setVisible] = useState(false)
 
     return(
         <div className="flex-column-left col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <ScrollFunc/>
             <div className="box box-cut"><img className="box-img" src={event.image} alt="" />
                 <div className="links-panel flex-row-between">
-                    <div onClick={() => handlerPhoto()}><i className="fas fa-search"></i></div>
+                    <div onClick={() => {setVisible(true)}}><i className="fas fa-search"></i></div>
+                        <Viewer
+                            visible={visible}
+                            onClose={() => {setVisible(false)}}
+                            images={[{src: `${event.image}`, alt: ""}]}
+                        />
                     <CopyToClipboard text={eventUrl}>
                         <div onClick={() => addedToClipboard()}><i className="fas fa-link"></i></div>
                     </CopyToClipboard>
