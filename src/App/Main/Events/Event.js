@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import CopyToClipboard from 'react-copy-to-clipboard'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
@@ -17,7 +17,6 @@ const Event = ({
     isLiked,
     addLike,
     removeLike,
-    scrollY
 }) => {
     
     const eventUrl = `https://coffee-blog-react.netlify.app/event_${id}`

@@ -11,7 +11,6 @@ import ScrollFunc from '../../Components/ScrollFunc'
 import Home from './Home/Home'
 import LatestEvents from './Home/LatestEvents/LatestEvents'
 import CoffeeProducts from './CoffeeProducts/CoffeeProducts'
-import Cart from '../../Components/Cart/Cart'
 
 const Main = () => { 
     

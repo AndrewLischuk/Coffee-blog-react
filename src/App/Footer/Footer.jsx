@@ -38,7 +38,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div style={{borderTop: '2px solid #443d38'}, {width: '100%'}}></div>
+            <div style={{borderTop: '2px solid #443d38', width: '100%'}}></div>
             <div className="container">
                 <div className="row">
                     <div className="flex-row-between copyright">
