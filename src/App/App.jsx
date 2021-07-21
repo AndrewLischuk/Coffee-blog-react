@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import '../assets/reset.css'
 import '../assets/base.css'
@@ -15,8 +15,18 @@ import HeaderContact from './Header/HeaderContact'
 import HeaderMenu from './Header/HeaderMenu'
 import Cart from '../Components/Cart/Cart'
 import CheckoutPage from '../Components/Cart/CheckoutPage'
+import { useDispatch } from 'react-redux'
+import { fetchEvents } from '../Redux/server/events.actions'
 
 const App = () => {
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(fetchEvents());
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     return (
         <>        
             <StickyMenu/>

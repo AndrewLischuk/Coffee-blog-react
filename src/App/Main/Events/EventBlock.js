@@ -1,8 +1,11 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import Event from './Event'
 import eventsBase from './eventsBase'
 
 const EventBlock = () => {
+
+    const eventsBase = useSelector(state => state.eventsBase)
     return (        
         <>
         {
