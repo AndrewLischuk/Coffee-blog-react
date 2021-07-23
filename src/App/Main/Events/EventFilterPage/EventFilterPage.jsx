@@ -1,12 +1,15 @@
 import { keys } from 'lodash'
-import eventsBase, { getEventsObj } from '../eventsBase'
+import { getEventsObj } from '../eventsBase'
 import CurrentCathegory from '../EventFilterPage/CurrentCathegory'
 import '../events.css'
+import { useSelector } from 'react-redux'
 
 const EventFilterPage = ({
-    eventObj = getEventsObj(eventsBase),
     match
 }) => {
+
+    const eventsBase = useSelector(state => state.eventsBase)
+    const eventObj = getEventsObj(eventsBase)
 
     const cathegory = match.params.cathegory   
     const selectedCathegory = eventsBase.filter((obj) => obj.cathegory === cathegory)

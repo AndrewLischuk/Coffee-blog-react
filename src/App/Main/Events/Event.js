@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import CopyToClipboard from 'react-copy-to-clipboard'
-import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import Viewer from 'react-viewer'
 import Likes from '../../../Components/Likes/Likes'
@@ -69,12 +68,5 @@ const Event = ({
         </>
         )
     }
-  
-
-    const mapStateToProps = (state) => ({
-        scrollY: state.scrollPosState
-    })
-    
-    export default connect (
-        mapStateToProps,
-    ) (Event)
+      
+    export default Event

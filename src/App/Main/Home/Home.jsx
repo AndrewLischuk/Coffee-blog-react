@@ -46,10 +46,10 @@ const Home = () => {
                             <p className="title-ev">Curabitur sed iaculis dolor, non congue ligula. Maecenas imperdiet ante eget</p>
                             <p className="text-ev">Nunc urna libero, congue porta nibh a, semper feugiat sem. Sed auctor dui eleifend, scelerisque eros ut, pellentesque nibh. Nam lacinia suscipit accumsan. Donec sodales, neque.</p>
                             <ul>
-                                <li><i class="fas fa-check"></i> Suspendisse a pellentesque dui, non felis.</li>
-                                <li><i class="fas fa-check"></i> Quisque lorem tortor fringilla sed.</li>
-                                <li><i class="fas fa-check"></i> Quisque cursus et, porttitor risus.</li>
-                                <li><i class="fas fa-check"></i> Nulla ipsum dolor lacus, suscipit adipiscing.</li>
+                                <li><i className="fas fa-check"></i> Suspendisse a pellentesque dui, non felis.</li>
+                                <li><i className="fas fa-check"></i> Quisque lorem tortor fringilla sed.</li>
+                                <li><i className="fas fa-check"></i> Quisque cursus et, porttitor risus.</li>
+                                <li><i className="fas fa-check"></i> Nulla ipsum dolor lacus, suscipit adipiscing.</li>
                             </ul>
                         </div>
                     </div>

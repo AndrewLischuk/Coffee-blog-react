@@ -1,16 +1,20 @@
 import React from 'react'
-import eventsBase, { getEventsObj } from '../eventsBase'
+import { getEventsObj } from '../eventsBase'
 import '../../../../Components/Testimonials/testimonials.css'
 import ScrollFunc from '../../../../Components/ScrollFunc'
 import { Link } from 'react-router-dom'
 import Likes from '../../../../Components/Likes/Likes'
 import Separator from '../../../Separator/Separator'
 import { Testimonials } from '../../../../Components/Testimonials/Testimonials'
+import { useSelector } from 'react-redux'
 
-const EventPage = ({
-    event = getEventsObj(eventsBase),                    
+const EventPage = ({                    
     match,
-}) => { 
+}) => {
+    
+    const eventsBase = useSelector(state => state.eventsBase)
+    const event = getEventsObj(eventsBase)
+    
     const id = match.params.id 
     return (
         <>

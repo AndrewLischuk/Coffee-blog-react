@@ -28,7 +28,7 @@ const Menu = ({
             <div><Link to="/menu"  onClick={() => (window.innerWidth < 769) ? deActivateH() : ""}>Menu</Link></div>
             <div><Link to="/events" onClick={() => (window.innerWidth < 769) ? deActivateH() : ""}>Events</Link></div>
             <div><Link to="/contacts" onClick={() => (window.innerWidth < 769) ? deActivateH() : ""}>Contacts</Link></div>
-            <div><Link to="/cart" onClick={() => (window.innerWidth < 769) ? deActivateH() : ""}><i class="fas fa-shopping-cart"></i></Link></div>
+            <div><Link to="/cart" onClick={() => (window.innerWidth < 769) ? deActivateH() : ""}><i className="fas fa-shopping-cart"></i></Link></div>
         </nav>
     )
 }
